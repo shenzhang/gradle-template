@@ -2,6 +2,8 @@ group = 'tk.fish722'
 version = '1.0.0-SNAPSHOT'
 description = 'gradle template'
 
+apply plugin: 'jetty'
+
 buildscript {
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
