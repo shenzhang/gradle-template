@@ -14,6 +14,7 @@ buildscript {
 allprojects {
     apply plugin: 'idea'
     apply plugin: 'java'
+	apply plugin: 'groovy'
 
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
@@ -35,7 +36,9 @@ dependencies {
             'org.slf4j:jcl-over-slf4j:1.7.5',
             'org.slf4j:slf4j-log4j12:1.7.6',
             'com.google.guava:guava:18.0',
-            'log4j:log4j:1.2.17'
+            'log4j:log4j:1.2.17',
+			
+			'org.codehaus.groovy:groovy-all:2.3.6'
     )
 
     testCompile(
