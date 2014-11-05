@@ -7,7 +7,7 @@ apply plugin: 'jetty'
 buildscript {
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
-        mavenCentral()
+        jcenter()
     }
 }
 
@@ -18,7 +18,7 @@ allprojects {
 
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
-        mavenCentral()
+        jcenter()
     }
 
     idea {
