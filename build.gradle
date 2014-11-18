@@ -1,4 +1,4 @@
-group = 'tk.fish722'
+group = 'io.github.shenzhang'
 version = '1.0.0-SNAPSHOT'
 description = 'gradle template'
 
