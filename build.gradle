@@ -20,12 +20,12 @@ allprojects {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
         jcenter()
     }
+}
 
-    idea {
-        project {
-            jdkName = '1.8'
-            languageLevel = '1.8'
-        }
+idea {
+    project {
+        jdkName = '1.8'
+        languageLevel = '1.8'
     }
 }
 
