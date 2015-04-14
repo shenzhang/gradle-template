@@ -1,4 +1,4 @@
-group = 'io.github.shenzhang'
+group = 'com.github.shenzhang'
 version = '1.0.0-SNAPSHOT'
 description = 'gradle template'
 
