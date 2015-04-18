@@ -11,10 +11,13 @@ buildscript {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
 allprojects {
     apply plugin: 'idea'
     apply plugin: 'java'
-	apply plugin: 'groovy'
 
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
@@ -26,6 +29,14 @@ idea {
     project {
         jdkName = '1.8'
         languageLevel = '1.8'
+
+        ipr {
+            withXml { provider ->
+                provider.node.component
+                        .find { it.@name == 'VcsDirectoryMappings' }
+                        .mapping.@vcs = 'Git'
+            }
+        }
     }
 }
 
@@ -47,15 +58,6 @@ dependencies {
     )
 }
 
-idea.project.ipr {
-    withXml { provider ->
-        provider.node.component
-                .find { it.@name == 'VcsDirectoryMappings' }
-                .mapping.@vcs = 'Git'
-    }
+jettyRun {
+    contextPath = ''
 }
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
-}
-
