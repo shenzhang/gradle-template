@@ -46,6 +46,7 @@ idea {
 
 dependencies {
     compile(
+            'org.codehaus.groovy:groovy-all:2.3.6',
             'commons-logging:commons-logging:1.1.3',
             'org.slf4j:slf4j-api:1.7.5',
             'org.slf4j:jcl-over-slf4j:1.7.5',
@@ -56,7 +57,7 @@ dependencies {
 
     testCompile(
             'junit:junit:4.11',
-			      'org.easymock:easymock:3.2'
+            'org.easymock:easymock:3.2'
     )
 }
 
