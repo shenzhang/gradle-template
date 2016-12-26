@@ -5,3 +5,6 @@
 .gradle
 build
 out
+.settings
+.project
+.classpath
