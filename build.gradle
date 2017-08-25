@@ -1,25 +1,20 @@
-group = 'com.github.shenzhang'
-version = '1.0.0-SNAPSHOT'
-description = 'gradle template'
-
-buildscript {
-    repositories {
-        maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
-        jcenter()
-    }
-}
-
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.3'
+    gradleVersion = '4.1'
 }
 
-allprojects {
-    apply plugin: 'idea'
+apply plugin: 'idea'
+
+subprojects {
     apply plugin: 'java'
-    apply plugin: 'groovy'
 
     sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
+
+    buildscript {
+        repositories {
+            maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
+            jcenter()
+        }
+    }
 
     repositories {
         maven { url 'http://127.0.0.1:8081/nexus/content/groups/public' }
@@ -40,19 +35,4 @@ idea {
             }
         }
     }
-}
-
-dependencies {
-    compile(
-            'org.codehaus.groovy:groovy-all:2.3.6',
-            'org.slf4j:slf4j-api:1.7.5',
-            'ch.qos.logback:logback-classic:1.1.8',
-
-            'com.google.guava:guava:18.0',
-    )
-
-    testCompile(
-            'junit:junit:4.11',
-            'org.easymock:easymock:3.2'
-    )
 }
