@@ -1,18 +1,13 @@
-group = 'com.github.shenzhang'
+group = 'com.shenzhang'
 version = '1.0.0-SNAPSHOT'
 description = 'gradle template'
 
 
 dependencies {
-    compile(
-            'org.slf4j:slf4j-api:1.7.5',
-            'ch.qos.logback:logback-classic:1.1.8',
+    compile('org.slf4j:slf4j-api:1.7.5')
+    compile('ch.qos.logback:logback-classic:1.1.8')
+    compile('com.google.guava:guava:18.0')
 
-            'com.google.guava:guava:18.0',
-    )
-
-    testCompile(
-            'junit:junit:4.11',
-            'org.easymock:easymock:3.2'
-    )
+    testCompile('junit:junit:4.11')
+    testCompile('org.easymock:easymock:3.2')
 }
